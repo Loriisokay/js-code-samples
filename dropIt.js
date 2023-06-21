@@ -1,7 +1,10 @@
-// TODO: 
-// Drop it
-// Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
-// Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
+/** 
+ * TODO: 
+ * Given the array arr, iterate through and remove each element starting from the first element (the 0 index) 
+ * until the function func returns true when the iterated element is passed through it.
+ * Then return the rest of the array once the condition is satisfied, 
+ * otherwise, arr should be returned as an empty array.
+*/
 
 function dropElements(arr, func) {
   let copyArr = [...arr];
@@ -14,10 +17,10 @@ function dropElements(arr, func) {
     } else if (func(arr[i])) {
       result = [...copyArr];
       break;
+    }
   }
+
+  return result;
 }
 
-return result;
-}
-
-dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;});
+dropElements([1, 2, 3, 9, 2], function (n) { return n > 2; });

@@ -1,12 +1,14 @@
-// TODO: 
-// Steamroller
-// Flatten a nested array. You must account for varying levels of nesting.
+/** 
+ * TODO: 
+ * Flatten a nested array. You must account for varying levels of nesting.
+*/ 
 
 function steamrollArray(arr) {
     if (!Array.isArray(arr)) {
         return arr;
     } else {
         let newArr = [];
+
         arr.forEach(element => {
             if (Array.isArray(element)) {
                newArr = newArr.concat(steamrollArray(element));
@@ -14,6 +16,7 @@ function steamrollArray(arr) {
                 newArr.push(element);
             }
         });
+        
         return newArr;
     }
 }
